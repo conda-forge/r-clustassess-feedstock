@@ -1,6 +1,5 @@
 {% set version = '0.3.0' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-clustassess
@@ -13,8 +12,7 @@ source:
   sha256: f8bf6236f25592ee055e995fdedb933c59dfe12787691830da7910b46e2b172d
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -50,7 +50,6 @@ requirements:
     - r-uwot
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rcpp
     - r-doparallel
