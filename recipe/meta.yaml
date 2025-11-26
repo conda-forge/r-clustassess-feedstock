@@ -33,36 +33,74 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix
-    - r-rcpp
     - r-doparallel
     - r-dplyr
+    - r-dt
     - r-fastcluster
     - r-foreach
+    - r-ggnewscale
     - r-ggplot2
+    - r-ggrastr
+    - r-ggrepel
+    - r-ggtext
+    - r-gmedian
+    - r-gprofiler2
     - r-igraph
     - r-irlba
+    - r-jsonlite
+    - r-leiden
     - r-magrittr
+    - r-matrix
+    - r-matrixstats
+    - r-paletteer
+    - r-plotly
     - r-progress
+    - r-qualpalr
+    - r-rann
+    - r-rcpp
     - r-reshape2
     - r-rlang
+    - r-seurat
+    - r-shiny
+    - r-shinyjs
+    - r-shinylp
+    - r-shinywidgets
     - r-stringr
     - r-uwot
   run:
     - r-base
-    - r-matrix
-    - r-rcpp
     - r-doparallel
     - r-dplyr
+    - r-dt
     - r-fastcluster
     - r-foreach
+    - r-ggnewscale
     - r-ggplot2
+    - r-ggrastr
+    - r-ggrepel
+    - r-ggtext
+    - r-gmedian
+    - r-gprofiler2
     - r-igraph
     - r-irlba
+    - r-jsonlite
+    - r-leiden
     - r-magrittr
+    - r-matrix
+    - r-matrixstats
+    - r-paletteer
+    - r-plotly
     - r-progress
+    - r-qualpalr
+    - r-rann
+    - r-rcpp
     - r-reshape2
     - r-rlang
+    - r-seurat
+    - r-shiny
+    - r-shinyjs
+    - r-shinylp
+    - r-shinywidgets
     - r-stringr
     - r-uwot
 
