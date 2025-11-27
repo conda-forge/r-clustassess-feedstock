@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -33,9 +37,14 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-doparallel
-    - r-dplyr
     - r-dt
+    - r-gmedian
+    - r-matrix >=1.5.0
+    - r-rann
+    - r-rcpp
+    - r-rcppeigen
+    - r-seurat
+    - r-dplyr
     - r-fastcluster
     - r-foreach
     - r-ggnewscale
@@ -43,35 +52,35 @@ requirements:
     - r-ggrastr
     - r-ggrepel
     - r-ggtext
-    - r-gmedian
+    - r-glue
     - r-gprofiler2
     - r-igraph
-    - r-irlba
     - r-jsonlite
     - r-leiden
-    - r-magrittr
-    - r-matrix
     - r-matrixstats
     - r-paletteer
     - r-plotly
     - r-progress
     - r-qualpalr
-    - r-rann
-    - r-rcpp
     - r-reshape2
     - r-rlang
-    - r-seurat
     - r-shiny
-    - r-shinyjs
     - r-shinylp
     - r-shinywidgets
+    - r-shinyjs
     - r-stringr
     - r-uwot
+    - r-vioplot
   run:
     - r-base
-    - r-doparallel
-    - r-dplyr
     - r-dt
+    - r-gmedian
+    - r-matrix >=1.5.0
+    - r-rann
+    - r-rcpp
+    - r-rcppeigen
+    - r-seurat
+    - r-dplyr
     - r-fastcluster
     - r-foreach
     - r-ggnewscale
@@ -79,30 +88,25 @@ requirements:
     - r-ggrastr
     - r-ggrepel
     - r-ggtext
-    - r-gmedian
+    - r-glue
     - r-gprofiler2
     - r-igraph
-    - r-irlba
     - r-jsonlite
     - r-leiden
-    - r-magrittr
-    - r-matrix
     - r-matrixstats
     - r-paletteer
     - r-plotly
     - r-progress
     - r-qualpalr
-    - r-rann
-    - r-rcpp
     - r-reshape2
     - r-rlang
-    - r-seurat
     - r-shiny
-    - r-shinyjs
     - r-shinylp
     - r-shinywidgets
+    - r-shinyjs
     - r-stringr
     - r-uwot
+    - r-vioplot
 
 test:
   commands:
